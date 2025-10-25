@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Creator Stocks — Invest in creators. Earn when they win.</title>
+  <meta name="description" content="Creator Stocks lets fans invest in their favorite creators’ next videos — and share profits when the content succeeds." />
+  <meta name="author" content="Creator Stocks" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#FAFBFF;
+      --card:#FFFFFF;
+      --muted:#6B7280;
+      --brand:#6C5CE7;
+      --accent:#4F46E5;
+      --radius:16px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#FBFDFF 0%, #F7F8FF 100%);
+      color:#0F172A;
+      line-height:1.45;
+      padding:32px 18px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{width:100%;max-width:var(--maxw);}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;}
+    .logo{
+      width:48px;height:48px;border-radius:10px;display:inline-grid;place-items:center;
+      background:linear-gradient(135deg,var(--brand),var(--accent));color:white;font-weight:700;
+    }
+    .brand h1{font-size:16px;margin:0}
+    .nav{display:flex;gap:12px;align-items:center;}
+    .btn{border:0;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer;}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--accent));color:white;}
+    .btn-ghost{background:transparent;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr 480px;gap:28px;align-items:center;margin-bottom:36px;}
+    @media(max-width:980px){.hero{grid-template-columns:1fr;}}
+    .hero-left{
+      background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));
+      padding:28px;border-radius:var(--radius);
+      box-shadow:0 6px 24px rgba(15,23,42,0.06);
+    }
+    .kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:#EEF2FF;color:var(--accent);font-weight:700;font-size:12px;margin-bottom:12px}
+    h2{font-size:28px;margin:0 0 12px 0;line-height:1.05}
+    p.lead{margin:0 0 18px 0;color:var(--muted)}
+    section{margin-bottom:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+    @media(max-width:980px){.grid-3{grid-template-columns:1fr;}}
+    .step{padding:18px;border-radius:12px;background:#fff;border:1px solid rgba(15,23,42,0.03);}
+    .icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:#F6F9FF;color:var(--accent);font-weight:700;margin-bottom:12px;}
+    ul.benefits{list-style:none;padding:0;margin:0}
+    ul.benefits li{padding:8px 0;border-bottom:1px dashed #F1F5F9;color:var(--muted)}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:980px){.faq{grid-template-columns:1fr}}
+    .faq-item{padding:16px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfcff);border:1px solid rgba(15,23,42,0.03)}
+    footer{margin-top:18px;padding-top:16px;border-top:1px solid rgba(15,23,42,0.03);display:flex;justify-content:space-between;align-items:center;gap:12px;}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">CS</div>
+        <div>
+          <h1>Creator Stocks</h1>
+          <div class="small">Invest in creators · Earn when they win</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <button class="btn btn-ghost" onclick="scrollToSection('how')">How it works</button>
+        <button class="btn btn-ghost" onclick="scrollToSection('benefits')">Benefits</button>
+        <button class="btn btn-primary" onclick="scrollToSection('signup')">Join Waitlist</button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <div class="kicker">New — Beta waitlist</div>
+        <h2 id="hero-heading">Invest in Creators. Earn When They Win.</h2>
+        <p class="lead">Creator Stocks lets fans invest in their favorite creators’ next videos and share profits when the content succeeds. Creators raise funds — fans earn returns. Fair. Transparent. Built for creators and their communities.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
+          <button class="btn btn-primary" onclick="scrollToSection('signup')">Join the Waitlist</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('how')">Learn How It Works</button>
+        </div>
+      </div>
+
+      <!-- Embedded Google Form -->
+      <aside class="hero-right">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd5kUDM83SNClXBfzAQTpyEbbSVbp5ZQ2L8cLRgssh8BQj9zw/viewform?embedded=true" 
+          width="100%" 
+          height="800" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          style="border-radius:12px;background:#fff;">
+          Loading…
+        </iframe>
+      </aside>
+    </section>
+
+    <!-- How it works -->
+    <section id="how">
+      <h3>How Creator Stocks Works</h3>
+      <p class="small" style="max-width:780px">A simple, three-step funding model that aligns creators and fans. Creators list a video project and funding goal. Fans invest small amounts. When the video earns profit, investors receive their share.</p>
+
+      <div class="grid-3" style="margin-top:18px">
+        <div class="step">
+          <div class="icon">1</div>
+          <strong>Creators List Projects</strong>
+          <p class="small">Post your next video budget, select investors, and set per-investor limits.</p>
+        </div>
+        <div class="step">
+          <div class="icon">2</div>
+          <strong>Fans Invest</strong>
+          <p class="small">Fans choose a project and pledge small amounts — $10, $50, or $100.</p>
+        </div>
+        <div class="step">
+          <div class="icon">3</div>
+          <strong>Profits Are Shared</strong>
+          <p class="small">After about 4 weeks, 50% of the creator’s profit is shared with investors. Underperforming videos roll forward investor principal to future profits.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits">
+      <h3>Why Creator Stocks</h3>
+      <p class="small" style="max-width:780px">Creators shouldn’t have to choose between personal debt and chasing sponsors. Creator Stocks empowers creators to fund their ideas while giving fans a meaningful way to support and earn.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:12px">
+        <div>
+          <div style="background:#fff;padding:18px;border-radius:12px;margin-bottom:12px;">
+            <h4>For Creators</h4>
+            <ul class="benefits">
+              <li>Raise production funds without debt</li>
+              <li>Choose your number of investors</li>
+              <li>Focus on creation, not sponsorship hunting</li>
+            </ul>
+          </div>
+          <div style="background:#fff;padding:18px;border-radius:12px;">
+            <h4>For Investors</h4>
+            <ul class="benefits">
+              <li>Back creators you love with micro-investments</li>
+              <li>Earn ROI when videos perform well</li>
+              <li>Protected principal — underperforming projects get repaid later</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside>
+          <div style="background:#fff;padding:18px;border-radius:12px;">
+            <h4>The Break-Even Promise</h4>
+            <p class="small">If a video underperforms, investments aren’t lost — they’re repaid from the creator’s next profitable videos. This keeps creators motivated and protects investor funds.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq" style="margin-top:12px">
+        <div class="faq-item">
+          <strong>How do investors get payouts?</strong>
+          <p class="small">Payouts are shared automatically after each video’s revenue cycle ends — typically 4 weeks after release.</p>
+        </div>
+        <div class="faq-item">
+          <strong>What if a video flops?</strong>
+          <p class="small">Investor principal is protected: it’s repaid from the creator’s next profitable video.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Can I be both creator and investor?</strong>
+          <p class="small">Yes. You can fund your own projects and invest in others.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Is this real investing?</strong>
+          <p class="small">It’s a creator funding system built around performance-based revenue sharing, not traditional securities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup CTA -->
+    <section id="signup">
+      <h3>Join the Movement</h3>
+      <p class="small">Sign up for early access to the Creator Stocks beta and get invited to pilot programs.</p>
+
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSd5kUDM83SNClXBfzAQTpyEbbSVbp5ZQ2L8cLRgssh8BQj9zw/viewform?embedded=true"
+        width="100%"
+        height="900"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        style="border-radius:12px;background:#fff;">
+        Loading…
+      </iframe>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> Creator Stocks • All rights reserved</div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="#" class="small">Contact</a>
+        <a href="#" class="small">Privacy</a>
+        <a href="#" class="small">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function scrollToSection(id){
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth'});
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
